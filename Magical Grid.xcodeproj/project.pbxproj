@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A35CE79A80278FE231A62A5 /* Pods_Magical_Grid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1613D0F69C0CA8408F3A966A /* Pods_Magical_Grid.framework */; };
 		C72B30511F7BD11500F8EA44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72B30501F7BD11500F8EA44 /* AppDelegate.swift */; };
 		C72B30581F7BD11500F8EA44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C72B30571F7BD11500F8EA44 /* Assets.xcassets */; };
 		C72B30631F7BD15400F8EA44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72B30621F7BD15400F8EA44 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1613D0F69C0CA8408F3A966A /* Pods_Magical_Grid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Magical_Grid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		259559E19A66B3738F2B987E /* Pods-Magical Grid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magical Grid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Magical Grid/Pods-Magical Grid.release.xcconfig"; sourceTree = "<group>"; };
 		C72B304D1F7BD11500F8EA44 /* Magical Grid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magical Grid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72B30501F7BD11500F8EA44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C72B30571F7BD11500F8EA44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C72B305C1F7BD11500F8EA44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C72B30621F7BD15400F8EA44 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CBF0BB9820094E753AA75A9A /* Pods-Magical Grid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magical Grid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Magical Grid/Pods-Magical Grid.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,17 +29,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A35CE79A80278FE231A62A5 /* Pods_Magical_Grid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22BE84A04237A6ECDB8C90F7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CBF0BB9820094E753AA75A9A /* Pods-Magical Grid.debug.xcconfig */,
+				259559E19A66B3738F2B987E /* Pods-Magical Grid.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8455888ED96915C9F596AC3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1613D0F69C0CA8408F3A966A /* Pods_Magical_Grid.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C72B30441F7BD11500F8EA44 = {
 			isa = PBXGroup;
 			children = (
 				C72B304F1F7BD11500F8EA44 /* Magical Grid */,
 				C72B304E1F7BD11500F8EA44 /* Products */,
+				22BE84A04237A6ECDB8C90F7 /* Pods */,
+				8455888ED96915C9F596AC3B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,9 +89,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C72B305F1F7BD11500F8EA44 /* Build configuration list for PBXNativeTarget "Magical Grid" */;
 			buildPhases = (
+				D10AA44506F7C380BA4B4AD0 /* [CP] Check Pods Manifest.lock */,
 				C72B30491F7BD11500F8EA44 /* Sources */,
 				C72B304A1F7BD11500F8EA44 /* Frameworks */,
 				C72B304B1F7BD11500F8EA44 /* Resources */,
+				2B318EB9DE0236A0292EBDA1 /* [CP] Embed Pods Frameworks */,
+				3A67E3E48D361086E7635052 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,6 +150,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B318EB9DE0236A0292EBDA1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Magical Grid/Pods-Magical Grid-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Magical Grid/Pods-Magical Grid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A67E3E48D361086E7635052 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Magical Grid/Pods-Magical Grid-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D10AA44506F7C380BA4B4AD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Magical Grid-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C72B30491F7BD11500F8EA44 /* Sources */ = {
@@ -230,6 +311,7 @@
 		};
 		C72B30601F7BD11500F8EA44 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBF0BB9820094E753AA75A9A /* Pods-Magical Grid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4HAR89FJ3K;
@@ -243,6 +325,7 @@
 		};
 		C72B30611F7BD11500F8EA44 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 259559E19A66B3738F2B987E /* Pods-Magical Grid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4HAR89FJ3K;
