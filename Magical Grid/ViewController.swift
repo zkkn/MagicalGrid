@@ -6,6 +6,7 @@
 //  Copyright © 2017年 mycompany. All rights reserved.
 //
 
+import ChameleonFramework
 import UIKit
 
 class ViewController: UIViewController {
@@ -21,7 +22,7 @@ class ViewController: UIViewController {
         for j in 0...30 {
             for i in 0...numViewPerRow {
                 let cellView = UIView()
-                cellView.backgroundColor = randomColor()
+                cellView.backgroundColor = UIColor.randomFlat
                 cellView.frame = CGRect(x: CGFloat(i)*width, y: CGFloat(j)*width, width: width, height: width)
                 cellView.layer.borderWidth = 0.5
                 cellView.layer.borderColor = UIColor.black.cgColor
@@ -72,21 +73,5 @@ class ViewController: UIViewController {
             }, completion: { (_) in
             })
         }
-        
-//        var loopCount = 0
-//        for subview in view.subviews {
-//            if subview.frame.contains(location) {
-//                subview.backgroundColor = .black
-//                print("loopCopunt:", loopCount)
-//            }
-//            loopCount += 1
-//        }
-    }
-    
-    fileprivate func randomColor() -> UIColor {
-        let red = CGFloat(drand48())
-        let green = CGFloat(drand48())
-        let blue = CGFloat(drand48())
-        return UIColor(displayP3Red: red, green: green, blue: blue, alpha: 1)
     }
 }
