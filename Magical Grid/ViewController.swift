@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     let numViewPerRow = 15
     var cells = [String: UIView]()
+    var selectedCell: UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +23,10 @@ class ViewController: UIViewController {
         for j in 0...30 {
             for i in 0...numViewPerRow {
                 let cellView = UIView()
-                cellView.backgroundColor = UIColor.randomFlat
+                cellView.backgroundColor = UIColor(randomFlatColorOf: .light)
                 cellView.frame = CGRect(x: CGFloat(i)*width, y: CGFloat(j)*width, width: width, height: width)
                 cellView.layer.borderWidth = 0.5
-                cellView.layer.borderColor = UIColor.black.cgColor
+                cellView.layer.borderColor = UIColor.white.cgColor
                 view.addSubview(cellView)
                 
                 let key = "\(i)|\(j)"
@@ -35,8 +36,6 @@ class ViewController: UIViewController {
         
         view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePan)))
     }
-    
-    var selectedCell: UIView?
     
     func handlePan(gesture: UIPanGestureRecognizer) {
         let location = gesture.location(in: view)
